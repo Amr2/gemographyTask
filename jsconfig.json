@@ -1,0 +1,15 @@
+{
+  // this is my personal config file
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@/styles/*": ["styles/*"],
+      "@/helpers/*": ["src/helpers/*"],
+      "@/api/*": ["src/api/*"],
+      "@/components/*": ["src/components/*"],
+      "@/shared/*": ["src/components/shared/*"],
+      "@/svgs/*": ["src/assets/svg/*"],
+      "@/Images/*": ["src/assets/images/*"]
+    }
+  }
+}
