@@ -6,15 +6,6 @@
   gap: $gap;
 }
 
-// Source mixin
-@mixin make-container($padding-x) {
-  width: 100%;
-  padding-right: $padding-x;
-  padding-left: $padding-x;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 @mixin sm {
   @media (min-width: 576px) {
     @content;
@@ -38,5 +29,28 @@
 @mixin xxl {
   @media (min-width: 1400px) {
     @content;
+  }
+}
+
+@mixin makeContainer($padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+  @include sm() {
+    width: 540px;
+  }
+  @include md() {
+    width: 720px;
+  }
+  @include lg() {
+    width: 960px;
+  }
+  @include xl() {
+    width: 1140px;
+  }
+  @include xxl() {
+    width: 1320px;
   }
 }

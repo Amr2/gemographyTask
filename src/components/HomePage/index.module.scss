@@ -1,1 +1,7 @@
 @use "@/styles/styleFunctions.scss" as styleFunctions;
+
+.cardContainer {
+  padding-block: 30px;
+  @include styleFunctions.makeContainer(0px);
+  @include styleFunctions.flexLayout(center, center, column, 30px);
+}

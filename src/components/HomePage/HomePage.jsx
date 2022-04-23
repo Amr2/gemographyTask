@@ -1,7 +1,8 @@
 import React, { useState, useRef, useCallback } from "react";
 import { useFetch } from "@/helpers/hookes";
 import { convertDate } from "@/helpers/functions";
-
+import pageStyles from "./index.module.scss";
+import RepoCard from "../shared/RepoCard/RepoCard";
 const HomePage = ({ data }) => {
   const currentDate = convertDate(new Date());
   const perPage = 15;
@@ -37,34 +38,20 @@ const HomePage = ({ data }) => {
   //   }
 
   return (
-    <>
+    <div className={pageStyles.cardContainer}>
       {/* <input type="text" value={query} onChange={handleSearch}></input> */}
       {Repos?.map((repo, index) => {
         if (Repos?.length - 3 === index) {
           return (
-            <div ref={lastRepoElementRef} key={repo?.id}>
-              {`repo ${index}`}
-              {/* {repo} */}
-            </div>
+            <RepoCard ref={lastRepoElementRef} key={repo?.id} data={repo} />
           );
         } else {
-          return (
-            <div
-              style={{
-                backgroundColor: "#f5f5f5",
-                height: "400px",
-              }}
-              key={repo?.id}
-            >
-              {`repo ${index}`}
-              {/* {repo} */}
-            </div>
-          );
+          return <RepoCard key={repo?.id} data={repo} />;
         }
       })}
       <div>{loading && "Loading..."}</div>
       <div>{error && "Error"}</div>
-    </>
+    </div>
   );
 };
 
