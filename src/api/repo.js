@@ -7,5 +7,7 @@ export const getRepoes = async (pages, perPage, date) => {
     }&page=${pages}&per_page=${perPage}&sort=stars&order=desc`
   );
 
+
+
   return repoes;
 };
