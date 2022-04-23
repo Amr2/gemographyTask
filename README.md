@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Repo Card Desgin
+
+Repo card inspiration of: [Dark mode social media posts](https://www.figma.com/community/file/918814017190068692)
 
 ## Getting Started
 

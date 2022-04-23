@@ -1,0 +1,42 @@
+@mixin flexLayout($justifyContent, $alignItems, $directions, $gap) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $directions;
+  gap: $gap;
+}
+
+// Source mixin
+@mixin make-container($padding-x) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}

@@ -1,0 +1,36 @@
+@use "@/styles/styleFunctions.scss" as styleFunctions;
+
+:root {
+  --color-canvas-default: #0d1117;
+  --color-scale-red-6: #b62324;
+  --color-open-fg: #3fb950;
+
+  /* zIndexes */
+  --zIndex-Level-1: 9;
+  --zIndex-Level-2: 99;
+  --zIndex-Level-3: 999;
+  --zIndex-Level-4: 9999;
+  --zIndex-Level-5: 99999;
+  --zIndex-Level-max: 2147483647;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+}
+
+html {
+  font-size: 12px;
+  @include styleFunctions.sm() {
+    font-size: 16px;
+  }
+  @include styleFunctions.md() {
+    font-size: 18px;
+  }
+  @include styleFunctions.lg() {
+    font-size: 24px;
+  }
+}
