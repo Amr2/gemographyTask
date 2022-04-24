@@ -6,7 +6,7 @@
   background: rgba(29, 29, 29, 0.4);
   border-radius: 8px;
   overflow: hidden;
-  padding: 10px 30px;
+  padding: 15px 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -15,7 +15,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 94%;
+    height: 97%;
     top: 0;
     left: 0;
     border: 3.5px solid;
@@ -32,6 +32,76 @@
 }
 .avaterContainer {
   position: relative;
-  width: 125px;
+  min-width: 125px;
+  height: 100%;
   aspect-ratio: 1;
+}
+
+.repoInfo {
+  @include styleFunctions.flexLayout(center, flex-start, column, 20px);
+}
+
+.repoDescription {
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.33rem;
+    color: #c4c4c4;
+    a {
+      display: block;
+      color: #0feffd;
+    }
+  }
+}
+
+.repoStats {
+  @include styleFunctions.flexLayout(center, flex-start, row, 10px);
+  * {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    color: #c4c4c4;
+  }
+  .repoStatsItem {
+    border: 0.5px solid transparent;
+    border-radius: 3px;
+    padding: 0 5px;
+    @include styleFunctions.flexLayout(flex-start, center, row, 10px);
+    svg {
+      width: 24px;
+      aspect-ratio: 1;
+    }
+  }
+  .star {
+    svg {
+      fill: #0ffd8b;
+    }
+  }
+  .issue {
+    stroke: #ad00ff;
+    fill: #ad00ff;
+  }
+}
+
+.repoName {
+  @include styleFunctions.flexLayout(center, flex-start, column, 3px);
+  h3 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.33rem;
+    color: #c4c4c4;
+  }
+  a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    color: #c4c4c4;
+  }
 }

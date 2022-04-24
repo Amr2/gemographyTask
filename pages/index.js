@@ -4,19 +4,7 @@ import HomePage from "@/components/HomePage/HomePage";
 import { convertDate } from "@/helpers/functions";
 
 export default function Home({ data }) {
-  return (
-    <>
-      {/*
-      for testing the api Request
-      <input
-        type="date"
-        onChange={(e) =>
-          getRepoes(1, 5, e.target.value).then((data) => console.log(data))
-        }
-      /> */}
-      <HomePage {...{ data }} />
-    </>
-  );
+  return <HomePage {...{ data }} />;
 }
 
 export const getStaticProps = async (ctx) => {

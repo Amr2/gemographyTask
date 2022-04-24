@@ -1,5 +1,5 @@
 @use "@/styles/styleFunctions.scss" as styleFunctions;
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 :root {
   --color-canvas-default: #0d1117;
   --color-scale-red-6: #b62324;
@@ -20,6 +20,7 @@
   margin: 0;
   border: 0;
   outline: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 html {
